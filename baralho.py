@@ -15,5 +15,9 @@ class Baralho:
     def __repr__(self):
         return repr(self.cartas)
 
+    def __getitem__(self, item):
+        return self.cartas[item]
+
 b = Baralho()
 print(b)
+print(b.cartas[:5])
