@@ -12,5 +12,8 @@ class Baralho:
         # it does dot product of these for's
         self.cartas = [Carta(valor, naipe)  for naipe in naipes for valor in valores]
 
+    def __repr__(self):
+        return repr(self.cartas)
+
 b = Baralho()
-print(b.cartas)
+print(b)
