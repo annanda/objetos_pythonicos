@@ -18,3 +18,5 @@ Deve ser possível multiplicar um vetor por um número::
 Deve ser possível acessar o x e y do vetor através de índices::
     >>> vetor_1[0]
     1
+    >>> vetor_1[1]
+    2

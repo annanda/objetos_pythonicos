@@ -12,3 +12,11 @@ class Vector:
 
     def __mul__(self, other):
         return Vector(self.x * other, self.y * other)
+
+    def __getitem__(self, item):
+        if item == 0:
+            return self.x
+        elif item == 1:
+            return self.y
+        else:
+            raise IndexError("Índice não existe no vetor - Vetor bidimencional")
