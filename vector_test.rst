@@ -11,3 +11,7 @@ Deve ser possível somar dois vetores::
     >>> vetor_1 + vetor_2
     Vector(5, 9)
 
+Deve ser possível multiplicar um vetor por um número::
+    >>> vetor_2 * 3
+    Vector(12, 21)
+
