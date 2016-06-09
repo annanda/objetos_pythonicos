@@ -1,4 +1,5 @@
 from collections import namedtuple
+from random import shuffle
 
 Carta = namedtuple('Carta', 'valor naipe')
 
@@ -18,6 +19,14 @@ class Baralho:
     def __getitem__(self, item):
         return self.cartas[item]
 
+    def __len__(self):
+        return len(self.cartas)
+
+    def __setitem__(self, key, value):
+        self.cartas[key] = value
+
 b = Baralho()
 print(b)
-print(b.cartas[:5])
+print(b[:5])
+shuffle(b)
+print(b)
