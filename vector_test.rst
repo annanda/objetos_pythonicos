@@ -9,5 +9,5 @@ Deve ser possível criar um vetor::
 Deve ser possível somar dois vetores::
     >>> vetor_2 = Vector(4, 7)
     >>> vetor_1 + vetor_2
-    "Vector(5, 9)"
+    Vector(5, 9)
 
