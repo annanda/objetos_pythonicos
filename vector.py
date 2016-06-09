@@ -9,3 +9,6 @@ class Vector:
 
     def __repr__(self):
         return "Vector({}, {})".format(self.x, self.y)
+
+    def __mul__(self, other):
+        return Vector(self.x * other, self.y * other)
