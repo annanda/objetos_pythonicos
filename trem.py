@@ -26,3 +26,4 @@ class IteradorTrem:
 t = Trem(4)
 for vagao in t:
     print(vagao)
+
