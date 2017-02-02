@@ -3,15 +3,13 @@ from random import shuffle
 
 Carta = namedtuple('Carta', 'valor naipe')
 
+
 class Baralho:
-
     def __init__(self):
-        valores = [str(i) for i in range (2, 11)] + 'J Q K A'.split()
-        naipes = 'espadas paus copas ouros'.split()
-
-        # faz produto carteziano desses for
-        # it does dot product of these for's
-        self.cartas = [Carta(valor, naipe)  for naipe in naipes for valor in valores]
+        valores = [str(i) for i in range(2, 11)] + 'J Q K A'.split()
+        naipes = 'paus copas espada ouros'.split()
+        # é como se fosse um for dentro do outro. O for mais externo é o que vem primeiro
+        self.cartas = [Carta(valor, naipe) for naipe in naipes for valor in valores]
 
     def __repr__(self):
         return repr(self.cartas)
@@ -25,8 +23,13 @@ class Baralho:
     def __setitem__(self, key, value):
         self.cartas[key] = value
 
-b = Baralho()
-print(b)
-print(b[:5])
-shuffle(b)
-print(b)
+
+baralho = Baralho()
+print(baralho)
+shuffle(baralho)
+mao = baralho[:5]
+print(mao)
+print(len(baralho))
+
+for carta in baralho:
+    print(carta)
