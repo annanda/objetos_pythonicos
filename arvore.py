@@ -17,6 +17,8 @@ class Arvore:
                 yield filho
             for filho in Arvore(no.direito):
                 yield filho
+            # outra forma de fazer
+            # yield from iter(Arvore(no.esquerdo))
 
 
 neto_direita = No('d')
